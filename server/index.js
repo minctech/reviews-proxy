@@ -4,7 +4,7 @@ const port = 3000;
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 
-app.use('/listings/:listing_id', express.static('./public'));
+app.use(express.static('./public'));
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
